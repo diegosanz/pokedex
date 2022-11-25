@@ -22,21 +22,28 @@ module.exports = {
       {
         test: /\.s?[ac]ss$/i,
         use: [
-          MiniCssExtractPlugin.loader,
+          isProd ? MiniCssExtractPlugin.loader : "style-loader",
           {
             loader: "css-loader",
             options: {
               importLoaders: 1,
-              modules: true,
+              modules: {
+                localIdentName: isProd ? "[hash]" : "[local]__[hash:base64:5]",
+              },
             },
           },
+          "sass-loader",
         ],
-        include: /\.module\.css$/,
+        include: /\.module\.s?[ac]ss$/,
       },
       {
         test: /\.s?[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
-        exclude: /\.module\.css$/,
+        use: [
+          isProd ? MiniCssExtractPlugin.loader : "style-loader",
+          "css-loader",
+          "sass-loader",
+        ],
+        exclude: /\.module\.s?[ac]ss$/,
       },
     ],
   },
