@@ -1,10 +1,9 @@
+import classNames from "classnames";
 import { FC } from "react";
 import styles from "./styles.module.scss";
 
 const App: FC = () => {
-  console.log(styles);
-
-  return <h1 className={styles.prueba}>Hello world</h1>;
+  return <h1 className={classNames(styles.red)}>Hello world</h1>;
 };
 
 export default App;
