@@ -20,7 +20,7 @@ module.exports = {
         use: "ts-loader",
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.s?[ac]ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -30,8 +30,13 @@ module.exports = {
               modules: true,
             },
           },
-          "sass-loader",
         ],
+        include: /\.module\.css$/,
+      },
+      {
+        test: /\.s?[ac]ss$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        exclude: /\.module\.css$/,
       },
     ],
   },
