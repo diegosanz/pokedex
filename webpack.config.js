@@ -20,8 +20,30 @@ module.exports = {
         use: "ts-loader",
       },
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        test: /\.s?[ac]ss$/i,
+        use: [
+          isProd ? MiniCssExtractPlugin.loader : "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+              modules: {
+                localIdentName: isProd ? "[hash]" : "[local]__[hash:base64:5]",
+              },
+            },
+          },
+          "sass-loader",
+        ],
+        include: /\.module\.s?[ac]ss$/,
+      },
+      {
+        test: /\.s?[ac]ss$/i,
+        use: [
+          isProd ? MiniCssExtractPlugin.loader : "style-loader",
+          "css-loader",
+          "sass-loader",
+        ],
+        exclude: /\.module\.s?[ac]ss$/,
       },
     ],
   },
@@ -30,6 +52,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "src/index.html",
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: isProd ? "[name].[hash].css" : "[name].css",
+      chunkFilename: isProd ? "[id].[hash].css" : "[id].css",
+    }),
   ],
 };

@@ -12,8 +12,17 @@
     "paths": {
       "@components/*": ["./src/components"]
     },
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "classnameTransform": "camelCaseOnly"
+        }
+      }
+    ]
   },
+
   "include": ["src/**/*"],
   "exclude": ["node_modules", "build"]
 }
