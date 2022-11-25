@@ -1,4 +1,5 @@
 const isProd = process.env.NODE_ENV === "production";
+const isDevelopment = !isProd;
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -20,8 +21,8 @@ module.exports = {
         use: "ts-loader",
       },
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        test: /\.s[ac]ss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },
@@ -30,6 +31,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "src/index.html",
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: isProd ? "[name].[hash].css" : "[name].css",
+      chunkFilename: isProd ? "[id].[hash].css" : "[id].css",
+    }),
   ],
 };
