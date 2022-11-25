@@ -1,0 +1,8 @@
+dist
+node_modules
+cypress/fixtures
+cypress/plugins
+cypress/support
+src/**/*.test.js
+coverage
+webpack.config.js
