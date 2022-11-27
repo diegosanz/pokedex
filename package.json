@@ -15,6 +15,7 @@
   "author": "Diego Sanz",
   "license": "ISC",
   "devDependencies": {
+    "@testing-library/cypress": "^8.0.7",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/react": "^18.0.25",
@@ -23,6 +24,7 @@
     "@typescript-eslint/parser": "^5.44.0",
     "@vitejs/plugin-react": "^2.2.0",
     "css-loader": "^6.7.2",
+    "cypress": "^11.2.0",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
