@@ -25,6 +25,9 @@ module.exports = {
         exclude: /node_modules/,
         resolve: {
           extensions: ['.ts', '.tsx', '.js', '.json'],
+          alias: {
+            '@components': path.resolve(__dirname, 'src/components/'),
+          },
         },
         use: 'ts-loader',
       },
