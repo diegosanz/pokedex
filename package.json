@@ -10,7 +10,9 @@
     "test": "vitest",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "cy": "cypress run",
+    "cy:open": "cypress run"
   },
   "author": "Diego Sanz",
   "license": "ISC",
