@@ -1,0 +1,9 @@
+// Vitest Snapshot v1
+
+exports[`ErrorPage > Match Snapshot 1`] = `
+<div>
+  <h1>
+    Error page
+  </h1>
+</div>
+`;

@@ -20,9 +20,9 @@
           "classnameTransform": "camelCaseOnly"
         }
       }
-    ]
+    ],
+    "types": ["node", "vitest/globals"]
   },
-
-  "include": ["src/**/*"],
+  "include": ["./**/*"],
   "exclude": ["node_modules", "dist"]
 }
