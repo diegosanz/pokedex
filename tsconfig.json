@@ -20,9 +20,8 @@
           "classnameTransform": "camelCaseOnly"
         }
       }
-    ]
+    ],
+    "types": ["node", "vitest/globals", "cypress", "@testing-library/cypress"]
   },
-
-  "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }
