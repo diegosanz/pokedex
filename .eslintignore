@@ -6,3 +6,4 @@ cypress/support
 src/**/*.test.js
 coverage
 webpack.config.js
+server
