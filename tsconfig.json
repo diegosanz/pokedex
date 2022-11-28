@@ -25,5 +25,5 @@
     ],
     "types": ["node", "vitest/globals", "cypress", "@testing-library/cypress"]
   },
-  "exclude": ["node_modules", "dist", "src/**/__tests__/**"]
+  "exclude": ["node_modules", "dist", "src/**/__tests__/"]
 }
