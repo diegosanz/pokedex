@@ -27,6 +27,7 @@ module.exports = {
           extensions: ['.ts', '.tsx', '.js', '.json'],
           alias: {
             '@components': path.resolve(__dirname, 'src/components/'),
+            '@api': path.resolve(__dirname, 'src/api/'),
           },
         },
         use: 'ts-loader',

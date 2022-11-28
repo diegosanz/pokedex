@@ -12,7 +12,8 @@
     "paths": {
       "@components/*": ["./src/components/*"],
       "@hooks/*": ["./src/hooks/*"],
-      "@utils/*": ["./src/utils/*"]
+      "@utils/*": ["./src/utils/*"],
+      "@api/*": ["./src/api/*"]
     },
     "jsx": "react-jsx",
     "plugins": [
