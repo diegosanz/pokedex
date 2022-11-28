@@ -9,13 +9,13 @@ describe('pokeApiFetch', () => {
   })
 
   it('should call endpoint with the base url prefix', () => {
-    pokeApiFetch('test')
+    pokeApiFetch('/test')
     expect(fetch).toHaveBeenCalledTimes(1)
     expect(fetch).toBeCalledWith('https://pokeapi.co/api/v2/test', undefined)
   })
 
   it('should pass `init` parameters', () => {
-    pokeApiFetch('test', { method: 'POST' })
+    pokeApiFetch('/test', { method: 'POST' })
     expect(fetch).toHaveBeenCalledTimes(1)
     expect(fetch).toBeCalledWith('https://pokeapi.co/api/v2/test', {
       method: 'POST',
