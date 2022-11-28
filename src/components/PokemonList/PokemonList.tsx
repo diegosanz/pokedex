@@ -24,11 +24,19 @@ const PokemonList: FC = () => {
         ))}
       </ul>
       <div>
-        <button disabled={!hasPrevious} onClick={() => setPageRelative(-1)}>
+        <button
+          aria-label="Previous page"
+          disabled={!hasPrevious}
+          onClick={() => setPageRelative(-1)}
+        >
           &lt;
         </button>
 
-        <button disabled={!hasNext} onClick={() => setPageRelative(1)}>
+        <button
+          aria-label="Next page"
+          disabled={!hasNext}
+          onClick={() => setPageRelative(1)}
+        >
           &gt;
         </button>
       </div>
