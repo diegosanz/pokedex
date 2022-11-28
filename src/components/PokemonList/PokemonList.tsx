@@ -1,9 +1,10 @@
-import usePokemonList from '@api/hooks/usePokemonList'
+import usePokemonList from '@api/hooks/usePokemonList/usePokemonList'
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
 
 const PokemonList: FC = () => {
-  const { isLoading, error, data } = usePokemonList()
+  const { isLoading, error, data, hasNext, hasPrevious, setPageRelative } =
+    usePokemonList()
 
   if (isLoading) {
     return <>Loading...</>
@@ -22,6 +23,15 @@ const PokemonList: FC = () => {
           </li>
         ))}
       </ul>
+      <div>
+        <button disabled={!hasPrevious} onClick={() => setPageRelative(-1)}>
+          &lt;
+        </button>
+
+        <button disabled={!hasNext} onClick={() => setPageRelative(1)}>
+          &gt;
+        </button>
+      </div>
     </div>
   )
 }

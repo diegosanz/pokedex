@@ -9,8 +9,10 @@ const usePokemonList = (defaultPage = 0) => {
   return {
     page,
     setPage,
-    hasPrevious: query.data?.previous,
-    hasNext: query.data?.next,
+    setPageRelative: (pageAddRelative: number) =>
+      setPage((oldPage) => oldPage + pageAddRelative),
+    hasPrevious: !!query.data?.previous,
+    hasNext: !!query.data?.next,
     ...query,
   }
 }
