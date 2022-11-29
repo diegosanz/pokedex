@@ -16,7 +16,7 @@ const fetchPokemons = async (
   return res.json().then((response) => {
     return {
       ...response,
-      results: response.results.map((item: Omit<PokemonListItem, 'id'>) => {
+      results: response.results.map((item: Pick<PokemonListItem, 'url'>) => {
         return {
           ...item,
           id: extractPokemonId(item.url),
