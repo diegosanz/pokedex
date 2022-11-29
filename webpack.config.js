@@ -14,6 +14,7 @@ module.exports = {
     path: path.join(__dirname, './dist'),
     filename: 'bundle.js',
     publicPath: '/',
+    clean: true,
   },
   devServer: {
     historyApiFallback: true,
@@ -58,6 +59,19 @@ module.exports = {
           'sass-loader',
         ],
         exclude: /\.module\.s?[ac]ss$/,
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
+
+        type: 'javascript/auto',
       },
     ],
   },
