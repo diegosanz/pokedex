@@ -1,21 +1,30 @@
 import { render, screen } from '@testing-library/react'
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
 import ErrorPage from '../ErrorPage'
 
 describe('ErrorPage', async () => {
+  const setup = () => {
+    return render(
+      <BrowserRouter>
+        <ErrorPage />
+      </BrowserRouter>
+    )
+  }
+
   it('Renders correctly and unmount correctly', () => {
-    const { unmount } = render(<ErrorPage />)
+    const { unmount } = setup()
     unmount()
   })
 
   it('Match Snapshot', () => {
-    const { container } = render(<ErrorPage />)
+    const { container } = setup()
     expect(container).toMatchSnapshot()
   })
 
-  it.skip('Should contain error title', () => {
-    render(<ErrorPage />)
+  it('Should contain error title', () => {
+    setup()
 
-    expect(screen.getByRole('heading')).toHaveTextContent('Error page')
+    expect(screen.getByRole('link')).toHaveTextContent(/Go to the main page/i)
   })
 })
