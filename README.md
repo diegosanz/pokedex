@@ -72,6 +72,7 @@ Existen scripts para realizar diferentes tareas del proyecto:
 - Añadir traducciones.
 - Los links de navegación ahora mismo son "magic strings". Si se cambia una página a otra URL abría que recorrer toda la aplicación para cambiar los links que apunten a ella.
 - En proyectos más grandes o que pueden escalar más horizontalmente utilizo otra estructura de ficheros que permita agrupar los ficheros según su contexto.
+- He decidido simplificar los alias a las carpetas del proyecto haciendo un único alias. Los alias de `tsconfig.json` también se podrían incluir en Webpack con plugins [como este](https://www.npmjs.com/package/tsconfig-paths-webpack-plugin).
 
 ## Problemas encontrados
 
