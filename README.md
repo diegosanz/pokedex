@@ -37,6 +37,7 @@ Existen scripts para realizar diferentes tareas del proyecto:
 - Me gusta aplicar los principios DRY y SOLID siempre que me sea posible y pensar en cómo escalaría la aplicación a futuro.
 - Se ha creado la página de `detail` dado que la "búsqueda" devuelve el detalle de un Pokémon en concreto, no un listado de Pokémons similar al listado paginado. Por ello la búsqueda lleva directamente a la página del detalle.
 - Me gusta que Typescript autocomplete y me avise si cometo un error o cuando refactorizo, así que he sido estricto con el tipado. Se ha incluído también un tipado para los CSS Modules que detecte si una clase existe o no.
+- Se han intentado incluir únicamente las librerías de terceros extrictamente necesarias. Por ello librerías como `useDebounceFn` se han escrito a mano y se ha evitado usar Axios aunque este último de más calidad que mi wrapper `pokeApiFetch` del fetch.
 
 ## Posibles mejoras
 
