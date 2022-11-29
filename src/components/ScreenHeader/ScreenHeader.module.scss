@@ -1,0 +1,15 @@
+.screen-header {
+  display: flex;
+  height: 2.5rem;
+}
+
+.home-link-active {
+  font-weight: bold;
+  height: 100%;
+  color: var(--gb-dark);
+  margin: 0 0.25rem;
+}
+
+.home-link-hidden {
+  display: none;
+}
