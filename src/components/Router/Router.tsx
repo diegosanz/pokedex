@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ErrorPage from '../ErrorPage/ErrorPage'
-import PokemonDetail from '../PokemonDetail/PokemonDetail'
-import PokemonList from '../PokemonList/PokemonList'
+import PokemonDetailPage from '../PokemonDetailPage/PokemonDetailPage'
+import PokemonListPage from '../PokemonListPage/PokemonListPage'
 import Root from '../Root/Root'
 
 const router = createBrowserRouter([
@@ -13,15 +13,15 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <PokemonList />,
+        element: <PokemonListPage />,
       },
       {
         path: 'detail',
-        element: <PokemonDetail />,
+        element: <PokemonDetailPage />,
       },
       {
         path: 'detail/:pokemonId',
-        element: <PokemonDetail />,
+        element: <PokemonDetailPage />,
       },
     ],
   },
