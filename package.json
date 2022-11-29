@@ -25,6 +25,7 @@
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
     "@vitejs/plugin-react": "^2.2.0",
+    "@vitest/coverage-c8": "^0.25.3",
     "css-loader": "^6.7.2",
     "cypress": "^11.2.0",
     "eslint": "^8.28.0",
