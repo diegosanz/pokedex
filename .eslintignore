@@ -4,7 +4,7 @@ cypress/fixtures
 cypress/plugins
 cypress/support
 cypress/e2e
-src/**/*.test.js
+src/**/__tests__
 coverage
 webpack.config.js
 server

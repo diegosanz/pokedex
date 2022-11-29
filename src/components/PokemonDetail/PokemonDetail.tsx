@@ -1,13 +1,33 @@
+import usePokemonDetail from '@api/hooks/usePokemonDetail/usePokemonDetail'
 import { FC } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 const PokemonDetail: FC = () => {
   const { pokemonId } = useParams()
+  const { data, isLoading, error, fetchStatus } = usePokemonDetail(
+    pokemonId || ''
+  )
+
+  if (isLoading && fetchStatus !== 'idle') {
+    return <>Loading...</>
+  }
+
+  if (error) {
+    return <>An error has occurred</>
+  }
 
   return (
-    <div>
-      Pokemon detail {pokemonId}. <Link to="/">Home</Link>
-    </div>
+    <>
+      {!!data && (
+        <div>
+          <h1>{data?.name}</h1>
+          <div>
+            <p>Weigth: {data?.weight}</p>
+            <p>Height: {data?.height}</p>
+          </div>
+        </div>
+      )}
+    </>
   )
 }
 
