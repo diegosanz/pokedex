@@ -12,12 +12,17 @@ const SearchForm: FC = () => {
   }
 
   const [timedSearchHandler] = useDebounceFn(
-    () => search(searchInputRef.current?.value || ''),
+    () => search(searchInputRef.current?.value.toLocaleLowerCase() || ''),
     1000
   )
 
   return (
-    <input type="text" onChange={timedSearchHandler} ref={searchInputRef} />
+    <input
+      type="text"
+      onChange={timedSearchHandler}
+      ref={searchInputRef}
+      placeholder="Search a Pokémon..."
+    />
   )
 }
 
