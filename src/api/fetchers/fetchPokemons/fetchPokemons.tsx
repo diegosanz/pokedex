@@ -1,6 +1,6 @@
-import { PokemonList, PokemonListItem } from '@api/types/PokemonList'
-import extractPokemonId from '@api/utils/extractPokemonId/extractPokemonId'
-import pokeApiFetch from '@api/utils/pokeapiFetch/pokeApiFetch'
+import { PokemonList, PokemonListItem } from '@/api/types/PokemonList'
+import extractPokemonId from '@/api/utils/extractPokemonId/extractPokemonId'
+import pokeApiFetch from '@/api/utils/pokeapiFetch/pokeApiFetch'
 
 /**
  * Return the Pokemon list paginated

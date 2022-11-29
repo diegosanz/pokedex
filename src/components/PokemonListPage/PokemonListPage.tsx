@@ -1,8 +1,8 @@
-import usePokemonList from '@api/hooks/usePokemonList/usePokemonList'
+import usePokemonList from '@/api/hooks/usePokemonList/usePokemonList'
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
 
-const PokemonList: FC = () => {
+const PokemonListPage: FC = () => {
   const { isLoading, error, data, hasNext, hasPrevious, setPageRelative } =
     usePokemonList()
 
@@ -44,4 +44,4 @@ const PokemonList: FC = () => {
   ) : null
 }
 
-export default PokemonList
+export default PokemonListPage

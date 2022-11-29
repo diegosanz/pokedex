@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
 const NotFound: FC = () => {
-  return <div>Not found</div>
+  return <div>Pokemon not found</div>
 }
 
 export default NotFound

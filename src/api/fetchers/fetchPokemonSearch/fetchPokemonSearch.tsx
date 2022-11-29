@@ -1,5 +1,5 @@
-import { PokemonDetail } from '@api/types/PokemonDetail'
-import pokeApiFetch from '@api/utils/pokeapiFetch/pokeApiFetch'
+import { PokemonDetail } from '@/api/types/PokemonDetail'
+import pokeApiFetch from '@/api/utils/pokeapiFetch/pokeApiFetch'
 
 /** *"Fake search"* Its must match perfectly because pokeapi doesnt provide a search endpoint.
  * Returns the detail of one Pokemon

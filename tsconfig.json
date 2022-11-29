@@ -10,10 +10,7 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["./src/components/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@common/*": ["./src/common/*"],
-      "@api/*": ["./src/api/*"]
+      "@/*": ["./src/*"]
     },
     "jsx": "react-jsx",
     "plugins": [

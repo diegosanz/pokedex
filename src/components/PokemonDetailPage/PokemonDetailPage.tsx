@@ -1,9 +1,10 @@
-import usePokemonDetail from '@api/hooks/usePokemonDetail/usePokemonDetail'
-import SearchForm from '@components/SearchForm/SearchForm'
+import usePokemonDetail from '@/api/hooks/usePokemonDetail/usePokemonDetail'
+import NotFound from '@/components/PokemonNotFound/PokemonNotFound'
+import SearchForm from '@/components/SearchForm/SearchForm'
 import { FC } from 'react'
 import { useParams } from 'react-router-dom'
 
-const PokemonDetail: FC = () => {
+const PokemonDetailPage: FC = () => {
   const { pokemonId } = useParams()
   const { data, isLoading, error, fetchStatus, isNotFound } = usePokemonDetail(
     pokemonId || ''
@@ -14,7 +15,7 @@ const PokemonDetail: FC = () => {
       {isLoading && fetchStatus !== 'idle' ? (
         <div>Loading...</div>
       ) : isNotFound ? (
-        <div>Pokemon not found</div>
+        <NotFound />
       ) : error ? (
         <div>An error has occurred</div>
       ) : (
@@ -33,4 +34,4 @@ const PokemonDetail: FC = () => {
   )
 }
 
-export default PokemonDetail
+export default PokemonDetailPage
