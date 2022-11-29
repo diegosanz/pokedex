@@ -12,7 +12,7 @@
     "paths": {
       "@components/*": ["./src/components/*"],
       "@hooks/*": ["./src/hooks/*"],
-      "@utils/*": ["./src/utils/*"],
+      "@common/*": ["./src/common/*"],
       "@api/*": ["./src/api/*"]
     },
     "jsx": "react-jsx",

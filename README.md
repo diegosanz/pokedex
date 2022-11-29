@@ -52,3 +52,6 @@ A continuación se detallan las dependencias escogidas y las razones de su elecc
   - Dar al usuario la opción de elegir cuántos items por página desea. El hook está preparado para ello.
 
   \*_Nota:_ estas ampliaciones requerirían de un control en el que `results` no viniera vacío. Actualmente no es necesario ya que el usuario
+
+- Usar el loader de React Router con React Query, como en [este ejemplo](https://tanstack.com/query/v4/docs/examples/react/react-router).
+  .

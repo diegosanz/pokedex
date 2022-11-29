@@ -14,10 +14,10 @@ const PokemonList: FC = () => {
     return <>An error has occurred</>
   }
 
-  return (
+  return data ? (
     <div>
       <ul>
-        {data?.results.map((item) => (
+        {data.results.map((item) => (
           <li key={item.id}>
             <Link to={`/detail/${item.id}`}>{item.name}</Link>
           </li>
@@ -41,7 +41,7 @@ const PokemonList: FC = () => {
         </button>
       </div>
     </div>
-  )
+  ) : null
 }
 
 export default PokemonList
