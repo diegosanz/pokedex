@@ -5,13 +5,14 @@ describe('view pokemon detail', () => {
 
     // Select a pokémon
     cy.findByRole('link', {
-      name: /pikachu/i,
+      name: /bulbasaur/i,
     }).click()
 
     // Assert url
-    cy.url().should('include', '/detail/')
+    // TODO: checkear ID del seleccionado
+    cy.url().should('include', '/detail/1')
 
-    // Assert its pikachu profile
-    cy.findByText(/pokemon detail pikachu\./i).should('be.visible')
+    // Assert its the slected pokemon profile
+    cy.findByRole('heading').should('contain.text', 'bulbasaur')
   })
 })
