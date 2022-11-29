@@ -1,0 +1,12 @@
+.search {
+  background-color: transparent;
+  padding: 0.2rem;
+  border: 2px solid var(--gb-dark);
+  outline: none;
+  width: 100%;
+
+  &:focus {
+    color: var(--gb-lightest);
+    border-color: var(--gb-lightest);
+  }
+}

@@ -1,0 +1,21 @@
+.pixel-button {
+  border: 2px solid var(--gb-dark);
+  color: var(--gb-dark);
+  background-color: transparent;
+  padding: 0.2rem 2rem;
+  cursor: pointer;
+
+  &:focus {
+    color: var(--gb-lightest);
+    border-color: var(--gb-lightest);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  & + & {
+    margin-left: 0.2rem;
+  }
+}

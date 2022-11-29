@@ -1,6 +1,5 @@
 import usePokemonDetail from '@/api/hooks/usePokemonDetail/usePokemonDetail'
 import NotFound from '@/components/PokemonNotFound/PokemonNotFound'
-import SearchForm from '@/components/SearchForm/SearchForm'
 import { FC } from 'react'
 import { useParams } from 'react-router-dom'
 
@@ -29,7 +28,6 @@ const PokemonDetailPage: FC = () => {
           </div>
         )
       )}
-      <SearchForm />
     </>
   )
 }

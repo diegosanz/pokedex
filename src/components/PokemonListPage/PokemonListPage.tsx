@@ -1,4 +1,5 @@
 import usePokemonList from '@/api/hooks/usePokemonList/usePokemonList'
+import PixelButton from '@/components/PixelButton/PixelButton'
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -24,21 +25,21 @@ const PokemonListPage: FC = () => {
         ))}
       </ul>
       <div>
-        <button
+        <PixelButton
           aria-label="Previous page"
           disabled={!hasPrevious}
           onClick={() => setPageRelative(-1)}
         >
           &lt;
-        </button>
+        </PixelButton>
 
-        <button
+        <PixelButton
           aria-label="Next page"
           disabled={!hasNext}
           onClick={() => setPageRelative(1)}
         >
           &gt;
-        </button>
+        </PixelButton>
       </div>
     </div>
   ) : null
