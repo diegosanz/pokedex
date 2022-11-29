@@ -32,6 +32,7 @@ Existen scripts para realizar diferentes tareas del proyecto:
 
 ## Filosofía de la toma de decisiones
 
+- El diseño busca representar una interfaz gráfica ochentera, que sea cutre es parte de su encanto.
 - La API es estática, no se espera que tenga datos que se actualizen a corto plazo, por eso ello se busca que la aplicación cachee los datos en memoria y realice el menor número de peticiones de red posible.
 - No se han incluído el 100% de los test necesarios dado que mi tiempo es finito. Es una demo técnica, así que sólo se han hecho los test más representativos y/o que puedan servir de ejemplo.
 - Me gusta aplicar los principios DRY y SOLID siempre que me sea posible y pensar en cómo escalaría la aplicación a futuro.
