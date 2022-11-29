@@ -34,5 +34,10 @@
       ],
       "extends": ["plugin:testing-library/react"]
     }
-  ]
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }
