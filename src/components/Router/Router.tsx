@@ -16,6 +16,10 @@ const router = createBrowserRouter([
         element: <PokemonList />,
       },
       {
+        path: 'detail',
+        element: <PokemonDetail />,
+      },
+      {
         path: 'detail/:pokemonId',
         element: <PokemonDetail />,
       },
