@@ -5,28 +5,28 @@ import { useParams } from 'react-router-dom'
 
 const PokemonDetail: FC = () => {
   const { pokemonId } = useParams()
-  const { data, isLoading, error, fetchStatus } = usePokemonDetail(
+  const { data, isLoading, error, fetchStatus, isNotFound } = usePokemonDetail(
     pokemonId || ''
   )
 
-  if (isLoading && fetchStatus !== 'idle') {
-    return <>Loading...</>
-  }
-
-  if (error) {
-    return <>An error has occurred</>
-  }
-
   return (
     <>
-      {!!data && (
-        <div>
-          <h1>{data?.name}</h1>
+      {isLoading && fetchStatus !== 'idle' ? (
+        <div>Loading...</div>
+      ) : isNotFound ? (
+        <div>Pokemon not found</div>
+      ) : error ? (
+        <div>An error has occurred</div>
+      ) : (
+        !!data && (
           <div>
-            <p>Weigth: {data?.weight}</p>
-            <p>Height: {data?.height}</p>
+            <h1>{data.name}</h1>
+            <div>
+              <p>Weigth: {data.weight}</p>
+              <p>Height: {data.height}</p>
+            </div>
           </div>
-        </div>
+        )
       )}
       <SearchForm />
     </>

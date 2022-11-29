@@ -28,6 +28,7 @@ module.exports = {
           alias: {
             '@components': path.resolve(__dirname, 'src/components/'),
             '@api': path.resolve(__dirname, 'src/api/'),
+            '@common': path.resolve(__dirname, 'src/common/'),
           },
         },
         use: 'ts-loader',
