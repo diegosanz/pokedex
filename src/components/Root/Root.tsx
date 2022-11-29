@@ -1,12 +1,17 @@
 import { FC } from 'react'
 import { Outlet } from 'react-router-dom'
+import styles from './Root.module.scss'
 
 const Root: FC = () => {
   return (
-    <div>
-      root
-      <div>
-        <Outlet />
+    <div className={styles.wrapper}>
+      <div className={styles.pokedexCase}>
+        <div className={styles.pokedexScreenFrame}>
+          <div className={styles.pokedexScreen}>
+            <Outlet />
+          </div>
+        </div>
+        <div className={styles.brand}>Diego Sanz Technologies ®</div>
       </div>
     </div>
   )
