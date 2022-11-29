@@ -1,4 +1,4 @@
-import usePokemonList from '@api/hooks/usePokemonList/usePokemonList'
+import usePokemonList from '@/api/hooks/usePokemonList/usePokemonList'
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
 

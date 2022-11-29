@@ -1,9 +1,9 @@
+import ErrorPage from '@/components/ErrorPage/ErrorPage'
+import PokemonDetailPage from '@/components/PokemonDetailPage/PokemonDetailPage'
+import PokemonListPage from '@/components/PokemonListPage/PokemonListPage'
+import Root from '@/components/Root/Root'
 import { FC } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import ErrorPage from '../ErrorPage/ErrorPage'
-import PokemonDetailPage from '../PokemonDetailPage/PokemonDetailPage'
-import PokemonListPage from '../PokemonListPage/PokemonListPage'
-import Root from '../Root/Root'
 
 const router = createBrowserRouter([
   {

@@ -27,9 +27,7 @@ module.exports = {
         resolve: {
           extensions: ['.ts', '.tsx', '.js', '.json'],
           alias: {
-            '@components': path.resolve(__dirname, 'src/components/'),
-            '@api': path.resolve(__dirname, 'src/api/'),
-            '@common': path.resolve(__dirname, 'src/common/'),
+            '@': path.resolve(__dirname, 'src/'),
           },
         },
         use: 'ts-loader',

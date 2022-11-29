@@ -1,4 +1,4 @@
-import useDebounceFn from '@common/hooks/useDebounceFn/useDebounceFn'
+import useDebounceFn from '@/common/hooks/useDebounceFn/useDebounceFn'
 import { FC, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 

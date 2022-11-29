@@ -2,8 +2,11 @@
 
 exports[`ErrorPage > Match Snapshot 1`] = `
 <div>
-  <h1>
-    Error page
-  </h1>
+  <div>
+    <img
+      alt="404"
+      src="/src/assets/img/404.jpg"
+    />
+  </div>
 </div>
 `;

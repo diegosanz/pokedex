@@ -1,4 +1,4 @@
-import fetchPokemons from '@api/fetchers/fetchPokemons/fetchPokemons'
+import fetchPokemons from '@/api/fetchers/fetchPokemons/fetchPokemons'
 import { useQuery } from '@tanstack/react-query'
 import { useState } from 'react'
 

@@ -1,7 +1,7 @@
-import App from '@components/App/App'
+import App from '@/components/App/App'
+import '@/styles/index.scss'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './styles/index.scss'
 
 const container = document.getElementById('root')
 
