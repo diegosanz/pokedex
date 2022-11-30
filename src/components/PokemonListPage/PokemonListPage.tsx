@@ -20,7 +20,7 @@ const PokemonListPage: FC = () => {
       <ul>
         {data.results.map((item) => (
           <li key={item.id}>
-            <Link to={`/detail/${item.id}`}>{item.name}</Link>
+            <Link to={`/detail/${item.name}`}>{item.name}</Link>
           </li>
         ))}
       </ul>

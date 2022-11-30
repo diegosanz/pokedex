@@ -3,12 +3,13 @@ import styles from './PixelButton.module.scss'
 
 type ButtonProps = FC<PropsWithChildren & HTMLProps<HTMLButtonElement>>
 
-const PixelButton: ButtonProps = ({ children, onClick, disabled }) => {
+const PixelButton: ButtonProps = ({ children, ...props }) => {
   return (
     <button
-      onClick={onClick}
-      disabled={disabled}
+      onClick={props.onClick}
+      disabled={props.disabled}
       className={styles.pixelButton}
+      aria-label={props['aria-label']}
     >
       {children}
     </button>
