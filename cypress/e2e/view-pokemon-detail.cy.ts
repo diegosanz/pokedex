@@ -14,5 +14,7 @@ describe('view pokemon detail', () => {
 
     // Assert its the slected pokemon profile
     cy.findByRole('heading').should('contain.text', 'bulbasaur')
+
+    cy.backToHome()
   })
 })

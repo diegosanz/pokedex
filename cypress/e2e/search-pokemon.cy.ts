@@ -9,6 +9,8 @@ describe('search-pokemon', () => {
     cy.findByRole('heading')
       .contains(/pikachu/i)
       .should('exist')
+
+    cy.backToHome()
   })
 
   it('search must be case insensitive', () => {
@@ -21,6 +23,8 @@ describe('search-pokemon', () => {
     cy.findByRole('heading')
       .contains(/pikachu/i)
       .should('exist')
+
+    cy.backToHome()
   })
 
   it('search should display an error when pokemon is not found', () => {
@@ -29,5 +33,7 @@ describe('search-pokemon', () => {
     cy.findByPlaceholderText(/Search a Pokémon/i).type('totally_not_a_pokemon')
 
     cy.findByText(/Pokemon not found/i).should('exist')
+
+    cy.backToHome()
   })
 })
