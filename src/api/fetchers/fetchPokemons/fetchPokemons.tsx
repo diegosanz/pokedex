@@ -1,5 +1,4 @@
-import { PokemonList, PokemonListItem } from '@/api/types/PokemonList'
-import extractPokemonId from '@/api/utils/extractPokemonId/extractPokemonId'
+import { PokemonList } from '@/api/types/PokemonList'
 import pokeApiFetch from '@/api/utils/pokeapiFetch/pokeApiFetch'
 
 /**
@@ -13,17 +12,7 @@ const fetchPokemons = async (
 ): Promise<PokemonList> => {
   const offset = pageNum * pageSize
   const res = await pokeApiFetch(`/pokemon?offset=${offset}&limit=${pageSize}`)
-  return res.json().then((response) => {
-    return {
-      ...response,
-      results: response.results.map((item: Pick<PokemonListItem, 'url'>) => {
-        return {
-          ...item,
-          id: extractPokemonId(item.url),
-        }
-      }),
-    } as PokemonList
-  })
+  return res.json()
 }
 
 export default fetchPokemons

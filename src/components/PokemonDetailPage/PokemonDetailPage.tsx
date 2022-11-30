@@ -9,24 +9,28 @@ const PokemonDetailPage: FC = () => {
     pokemonId || ''
   )
 
+  if (isLoading && fetchStatus !== 'idle') {
+    return <div>Loading...</div>
+  }
+
+  if (isNotFound) {
+    return <NotFound />
+  }
+
+  if (error) {
+    return <div>An error has occurred</div>
+  }
+
   return (
     <>
-      {isLoading && fetchStatus !== 'idle' ? (
-        <div>Loading...</div>
-      ) : isNotFound ? (
-        <NotFound />
-      ) : error ? (
-        <div>An error has occurred</div>
-      ) : (
-        !!data && (
+      {!!data && (
+        <div>
+          <h1>{data.name}</h1>
           <div>
-            <h1>{data.name}</h1>
-            <div>
-              <p>Weigth: {data.weight}</p>
-              <p>Height: {data.height}</p>
-            </div>
+            <p>Weigth: {data.weight}</p>
+            <p>Height: {data.height}</p>
           </div>
-        )
+        </div>
       )}
     </>
   )
