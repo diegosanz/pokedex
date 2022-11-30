@@ -35,7 +35,12 @@ Existen scripts para realizar diferentes tareas del proyecto:
 - El diseño busca representar una interfaz gráfica ochentera, que sea cutre es parte de su encanto.
 - La filosofía que sigo con los test es la de intentar simularlo todo desde el punto de vista del usuario. Si un botón tiene un texto es mejor intentar seleccionarlo por dicho texto porque es lo que el usuario lee. Sólo usaría `data-test-id` o similares para elementos que por su naturaleza son imposibles o muy difíciles de seleccionar.
 - La API es estática, no se espera que tenga datos que se actualizen a corto plazo, por eso ello se busca que la aplicación cachee los datos en memoria y realice el menor número de peticiones de red posible.
-- No se han incluído el 100% de los test necesarios dado que mi tiempo es finito. Es una demo técnica, así que sólo se han hecho los test más representativos y/o que puedan servir de ejemplo.
+- No se han incluído el 100% de los test necesarios dado que mi tiempo es finito. Es una demo técnica, así que sólo se han hecho los test más representativos y/o que puedan servir de ejemplo. Test interesantes a mirar:
+  - `useDebounceFn.test.tsx`
+  - Los localizados en `cypress/e2e`
+  - `fetchPokemons.test.tsx`
+  - `usePokemonDetail.test.tsx`
+  - `ErrorPage.text.tsx`
 - Me gusta aplicar los principios DRY y SOLID siempre que me sea posible y pensar en cómo escalaría la aplicación a futuro.
 - Se ha creado la página de `detail` dado que la "búsqueda" devuelve el detalle de un Pokémon en concreto, no un listado de Pokémons similar al listado paginado. Por ello la búsqueda lleva directamente a la página del detalle.
 - Me gusta que Typescript autocomplete y me avise si cometo un error o cuando refactorizo, así que he sido estricto con el tipado. Se ha incluído también un tipado para los CSS Modules que detecte si una clase existe o no.
