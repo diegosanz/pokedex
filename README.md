@@ -2,19 +2,6 @@
 
 ![Pokedex screenshot](/readme_files/pokedex.png 'Pokedex screenshot')
 
-MarineGEO circle logo
-Inserting Images using html
-
-Images can also be inserted on pages using the html <img> tag. One advantage of using the html tag is the ability to control size and other style elements.
-
-<img src="/assets/img/MarineGEO_logo.png" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
-
-MarineGEO circle logo
-Tags: help website
-
-    ← Previous Post
-    Next Post →
-
 ## Introducción
 
 Este es un proyecto hecho a modo demo técnica. Consiste en consultar la api de [pokeapi](https://pokeapi.co/) mostrando un listado de Pokémons paginado. Se incluye tambien un símil de buscador (ya que pokeapi no dispone un endpoint para búsquedas) en el que hay que introducir exactamente el nombre del Pokémon para que el mismo sea encontrado.
